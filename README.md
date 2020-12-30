@@ -1,6 +1,9 @@
-## Single-Page Application criada no curso de "Desenvolvimento Web com ES6, Typescript e Angular"
+## Clone do Instagram
+Single-Page Application que emula o funcionamento do Instagram, com login de usuário e postagem de imagens utilizando o banco de dados do Firebase.</br>
+**Obs.:** Para testar o projeto, é necessário ter uma conta no firebase, obter as configurações e aplicá-las no arquivo src/app/app.component.ts
+
+Projeto criado e adaptado a partir do curso de "Desenvolvimento Web com ES6, Typescript e Angular"
 <p>Instrutor do curso: Jorge Sant Ana.</p>
-<p>Projeto adaptado.</p>
 
 <p>&nbsp;</p>
 
