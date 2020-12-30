@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 d-flex justify-content-end" [@animacao-banner]="estadoBanner">
+      <app-banner></app-banner>
+    </div>
+
+    <div *ngIf="cadastro; else formLogin">
+      <!-- É possível associar um evento no início e ao término da animação por meio de um event binder-->
+      <div 
+        class="col-sm-6 d-flex justify-content-start" 
+        [@animacao-painel]="estadoPainel"
+        (@animacao-painel.start)="inicioDaAnimacao()"
+        (@animacao-painel.done)="fimDaAnimacao()"        
+      >        
+        <!-- (exibirPainel) é um evento da classe filha. exibirPainel($event) é um método desta classe -->
+        <app-cadastro (exibirPainel)="exibirPainel($event)"></app-cadastro>
+      </div>  
+    </div>
+
+    <ng-template #formLogin>
+      <div 
+        class="col-sm-6 d-flex justify-content-start" 
+        [@animacao-painel]="estadoPainel" 
+        (@animacao-painel.start)="inicioDaAnimacao()"
+        (@animacao-painel.done)="fimDaAnimacao()"         
+      >
+        <!-- (exibirPainel) é um evento da classe filha. exibirPainel($event) é um método desta classe -->
+        <app-login (exibirPainel)="exibirPainel($event)"></app-login>        
+      </div>  
+    </ng-template>
+    
+  </div>
+</div>

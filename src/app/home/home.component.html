@@ -1,0 +1,18 @@
+<nav class="navbar fixed-top navbar-light bg-white">
+  <div class="container">
+    <div class="logo"></div>
+    <div>
+      <div class="add-post" data-toggle="modal" data-target="#staticBackdrop"></div>
+      <!-- href="javascript:void(0)" é para evitar que o link redirecione a página antes de processar o evento chamado-->
+      <a href="javascript:void(0)" (click)="sair()" style="margin-left: 25px">Sair</a>      
+    </div>    
+  </div>  
+</nav>
+
+<br /><br /><br />
+<div class="container">
+  <app-publicacoes [publicacoes]="publicacoes"></app-publicacoes> 
+  <!--- Como o componente abaixo é um modal, ele está invisível
+  (eventoFilho) = "eventoPai"  Quando o componente filho disparar o evento, o evento pai será disparado -->
+  <app-incluir-publicacao (atualizarTimeline)="atualizarTimelineHome()"></app-incluir-publicacao>  
+</div>
